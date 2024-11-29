@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  font-size: 18px;
+  overflow-x: hidden;
+  direction: rtl;
+}
+
+h1, h2, h3 {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  color: #010427;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #0958b1;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* تخصيص الأوزان الأخرى */
+.ibm-plex-sans-arabic-thin {
+  font-weight: 100; /* Thin */
+}
+
+.ibm-plex-sans-arabic-extralight {
+  font-weight: 200; /* Extra Light */
+}
+
+.ibm-plex-sans-arabic-light {
+  font-weight: 300; /* Light */
+}
+
+.ibm-plex-sans-arabic-regular {
+  font-weight: 400; /* Regular */
+}
+
+.ibm-plex-sans-arabic-medium {
+  font-weight: 500; /* Medium */
+}
+
+.ibm-plex-sans-arabic-semibold {
+  font-weight: 600; /* Semibold */
+}
+
+.ibm-plex-sans-arabic-bold {
+  font-weight: 700; /* Bold */
+}
+
+/* ألوان أساسية */
+:root {
+  --primary-color: #f9f9f9;
+  --secondary-color: #FFFF;
+  --accent-color: #ff6347;
+  --background-color: #f9f9f9;
+}
+
+/* البار العلوي */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #00000000;
+  color: #fff;
+  width: 100%;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* الحركات والتأثيرات */
+a, button {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+  transform: translateY(-5px);
+}
+
+/* تصميم الأزرار */
+.btn-main {
+  background-color: var(--secondary-color);
+  color: #010427;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-main:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-square {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.btn-square:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* الخلفيات */
+.home-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px 50px;
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 100vh;
+}
+
+.home-image img {
+  max-width: 100%;
+}
+
+/* قسم من نحن (About Us) */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 50px;
+  background-color: var(--background-color);
+  direction: rtl;
+}
+
+.about-content {
+  max-width: 50%;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.about-content h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.about-content .btn-main {
+  text-align: right;
+}
+
+.about-image {
+  max-width: 45%;
+}
+
+/* قسم خدماتنا (Services) */
+.services-section {
+  padding: 80px 50px;
+  background-color: var(--secondary-color);
+}
+
+.services-section h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-box img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.service-box h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* قسم المشاريع (Projects) */
+.projects-section {
+  padding: 80px 50px;
+  background-color: var(--primary-color);
+}
+
+.projects-section h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-box {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-box img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-box h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* قسم الشراكات (Partners) */
+.partners-section {
+  padding: 80px 50px;
+  background-color: var(--secondary-color);
+}
+
+.partners-section h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.partners-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.partner-logo {
+  max-width: 200px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+}
+
+/* قسم الاتصال (Contact) */
+.contact-section {
+  padding: 80px 50px;
+  background-color: var(--primary-color);
+}
+
+.contact-section h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  outline: none;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #0958b1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #ff6347;
+}
+
+/* تصميم متجاوب للجوال */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  /* باقي الاستعلامات من الرسالة السابقة */
+}
+
+/* تصميم الفوتر */
+footer {
+  padding: 10px 0;
+  text-align: center;
+  margin: 0;
+  background-color: #010427;
+  color: #ffffff;
+  direction: rtl;
+}
+
+/* الحاوية الرئيسية للفوتر */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; /* مسافة داخلية */
+}
+
+/* الشعار */
+.logo img {
+  max-width: 200px;  /* تحديد حجم الشعار */
+  margin-bottom: 10px; /* تقليل المسافة أسفل الشعار */
+  display: block; /* التأكد من أن الصورة تعرض بشكل صحيح */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* الروابط العلوية */
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px; /* تقليل المسافة بين الروابط */
+  flex-wrap: wrap; /* السماح بالعناصر للانتقال إلى صفوف جديدة */
+}
+
+.footer-links .left-links,
+.footer-links .right-links {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.footer-links .left-links a,
+.footer-links .right-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+
+/* الحقوق المحفوظة */
+.footer-policies {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 5px; /* تقليل المسافة العلوية */
+}
+
+.footer-policies p {
+  margin: 5px 0;
+}
+
+.footer-policies a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-policies a:hover {
+  color: var(--accent-color);
+}
+
+/* الأيقونات */
+.contact-info .icons {
+  display: flex;
+  justify-content: center; /* الأيقونات جنب بعض */
+  margin: 20px 0;
+}
+
+.contact-info .icon {
+  margin: 0 10px;  /* المسافة بين الأيقونات */
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s ease;  /* تأثير التحريك */
+}
+
+.contact-info .icon:hover {
+  color: var(--accent-color);
+  transform: translateY(-5px);  /* التحريك عند التمرير */
+}
+
+/* البريد ورقم الجوال */
+.contact-info .email,
+.contact-info .phone {
+  font-size: 14px;
+  margin: 5px 0;
+  opacity: 0.8;
+}
