@@ -1,51 +1,52 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar"> <!-- تحديد نوع المستند (HTML5) وتحديد اللغة العربية للمحتوى -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إيفيكو - اتصل بنا</title>
-    <link rel="stylesheet" href="cstyle.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- تعيين الترميز إلى UTF-8 لدعم الحروف العربية بشكل صحيح -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- تحديد استجابة الصفحة لتناسب الأجهزة المختلفة (الهواتف) -->
+    <title>إيفيكو - اتصل بنا</title> <!-- عنوان الصفحة الذي يظهر في التبويب الخاص بالمتصفح -->
+    <link rel="stylesheet" href="cstyle.css"> <!-- ربط ملف CSS لتنسيق الصفحة -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- ربط مكتبة AOS لتحريك العناصر عند التمرير -->
 </head>
-<body onload="AOS.init();">
+<body onload="AOS.init();"> <!-- عند تحميل الصفحة، يتم تفعيل مكتبة AOS لتحريك العناصر -->
 
-    <header class="header">
-        <div class="logo">
-            <a href="">
-            <img src="https://cdn.discordapp.com/attachments/769247177330393140/1311879204970696714/logo.png?ex=674a7638&is=674924b8&hm=bebea307954b5c9b0129edf1c58cb80886bd14494ef752618b2faa4b3ad257b9&" alt="شعار إيفيكو">
+    <header class="header"> <!-- رأس الصفحة الذي يحتوي على الشعار والقائمة -->
+        <div class="logo"> <!-- قسم الشعار -->
+            <a href=""> <!-- رابط الشعار (يمكنك تعديل الرابط ليرتبط بالصفحة الرئيسية) -->
+                <img src="https://cdn.discordapp.com/attachments/769247177330393140/1311879204970696714/logo.png?ex=674a7638&is=674924b8&hm=bebea307954b5c9b0129edf1c58cb80886bd14494ef752618b2faa4b3ad257b9&" alt="شعار إيفيكو"> <!-- صورة الشعار -->
+            </a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="#about">من نحن</a></li>
-                <li><a href="#services">خدماتنا</a></li>
-                <li><a href="#projects">مشاريعنا</a></li>
-                <li><a href="#partners">شراكاتنا</a></li>
-                <li><a href="contact.html">اتصل بنا</a></li>
+        <nav> <!-- قائمة التنقل -->
+            <ul> <!-- قائمة روابط -->
+                <li><a href="index.html">الرئيسية</a></li> <!-- رابط الصفحة الرئيسية -->
+                <li><a href="#about">من نحن</a></li> <!-- رابط قسم "من نحن" -->
+                <li><a href="#services">خدماتنا</a></li> <!-- رابط قسم "خدماتنا" -->
+                <li><a href="#projects">مشاريعنا</a></li> <!-- رابط قسم "مشاريعنا" -->
+                <li><a href="#partners">شراكاتنا</a></li> <!-- رابط قسم "شراكاتنا" -->
+                <li><a href="contact.html">اتصل بنا</a></li> <!-- رابط صفحة "اتصل بنا" الحالية -->
             </ul>
         </nav>
     </header>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="form-container">
-                <img src="https://cdn.discordapp.com/attachments/769247177330393140/1311879204970696714/logo.png?ex=674a7638&is=674924b8&hm=bebea307954b5c9b0129edf1c58cb80886bd14494ef752618b2faa4b3ad257b9&" alt="شعارنا" class="logo">
-                <form class="contact-form" action="send_email.php" method="POST">
-                    <div class="form-group">
+    <section id="contact" class="contact-section"> <!-- قسم "اتصل بنا" -->
+        <div class="container"> <!-- حاوية تحتوي على النموذج -->
+            <div class="form-container"> <!-- حاوية النموذج -->
+                <img src="https://cdn.discordapp.com/attachments/769247177330393140/1311879204970696714/logo.png?ex=674a7638&is=674924b8&hm=bebea307954b5c9b0129edf1c58cb80886bd14494ef752618b2faa4b3ad257b9&" alt="شعارنا" class="logo"> <!-- صورة الشعار في النموذج -->
+                <form class="contact-form" action="send_email.php" method="POST"> <!-- نموذج الاتصال الذي يرسل البيانات إلى ملف PHP -->
+                    <div class="form-group"> <!-- مجموعة الحقول -->
                         <div>
-                            <label for="name">الاسم</label>
-                            <input type="text" id="name" name="name" placeholder="اسمك" required>
+                            <label for="name">الاسم</label> <!-- تسمية حقل الاسم -->
+                            <input type="text" id="name" name="name" placeholder="اسمك" required> <!-- حقل النص لإدخال الاسم -->
                         </div>
                         <div>
-                            <label for="email">الإيميل</label>
-                            <input type="email" id="email" name="email" placeholder="بريدك الإلكتروني" required>
+                            <label for="email">الإيميل</label> <!-- تسمية حقل البريد الإلكتروني -->
+                            <input type="email" id="email" name="email" placeholder="بريدك الإلكتروني" required> <!-- حقل البريد الإلكتروني -->
                         </div>
                     </div>
-                    <label for="message">الرسالة</label>
-                    <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" required></textarea>
-                    <button type="submit">إرسال</button>
+                    <label for="message">الرسالة</label> <!-- تسمية حقل الرسالة -->
+                    <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" required></textarea> <!-- حقل نصي لإدخال الرسالة -->
+                    <button type="submit">إرسال</button> <!-- زر إرسال النموذج -->
                 </form>                
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <!-- ربط مكتبة AOS لتفعيل التأثيرات عند التمرير -->
 </body>
 </html>
