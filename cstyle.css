@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  font-size: 18px;
+  direction: rtl;
+}
+
+/* ألوان أساسية */
+:root {
+  --primary-color: #f9f9f9;
+  --secondary-color: #FFFF;
+  --accent-color: #ff6347;
+  --background-color: #f9f9f9;
+}
+
+/* البار العلوي */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #00000000;
+  color: #fff;
+  width: 100%;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+  /* قسم الاتصال (Contact) */
+  .contact-section {
+    padding: 80px 50px;
+    background-color: var(--primary-color);
+  }
+  
+  .contact-section h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    outline: none;
+  }
+  
+  .contact-form input[type="submit"] {
+    background-color: #0958b1;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #ff6347;
+  }
+  
+  /* تصميم متجاوب للجوال */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+    /* باقي الاستعلامات من الرسالة السابقة */
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans Arabic', sans-serif; /* تطبيق نفس الخط المستخدم في الموقع */
+  }
+  
+  .contact-section {
+    background-color: #b3d9ff; /* أزرق مشابه للصورة */
+    color: #0958b1;
+    height: 100vh; /* يجعل الصفحة تغطي الشاشة بالكامل */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .contact-info {
+    flex: 1;
+    text-align: left;
+    margin: 20px;
+  }
+  
+  .contact-info .logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+    line-height: 1.6;
+  }
+  
+  .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* لمحاذاة العناصر */
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    direction: ltr; /* لجعل الترتيب يبدأ من اليسار */
+  }
+  
+  .form-container .logo {
+    max-width: 500px; /* حجم مناسب للشعار */
+    height: auto;
+    order: -1; /* يجبر الشعار على الظهور قبل النموذج */
+  }
+  
+  .contact-form {
+    flex: 1;
+    max-width: 600px;
+    background: transparent;
+    margin: 20px;
+    text-align: left;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .form-group div {
+    flex: 1;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    color: #0958b1;
+    font-size: 16px;
+    outline: none;
+    border-bottom: 4px solid #0958b1; /* خط بسيط أسفل الحقول */
+    font-family: 'IBM Plex Sans Arabic', sans-serif; /* تطبيق نفس الخط المستخدم في الموقع */
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #5daeff;
+  }
+  
+  .contact-form button {
+    background-color: #0958b1;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .contact-form button:hover {
+    background-color: #5daeff;
+  }
