@@ -219,3 +219,70 @@ nav ul li a:hover {
   .contact-form button:hover {
     background-color: #5daeff;
   }
+
+
+
+
+
+
+/* تعيين تنسيق عام للصفحة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.video-item {
+    flex: 1 1 calc(33% - 30px);
+    max-width: 400px;
+    min-width: 300px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* تحريك المقاطع عند التمرير فوقها */
+.video-item:hover {
+    transform: scale(1.05);
+}
+
+/* تخصيص الـ iframe (مشغل الفيديو) */
+iframe {
+    width: 100%;
+    height: 225px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+
