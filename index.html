@@ -1,81 +1,157 @@
 <!DOCTYPE html>
-<html lang="ar"> <!-- تحديد نوع المستند (HTML5) وتحديد اللغة العربية للمحتوى -->
-<head>
-    <meta charset="UTF-8"> <!-- تعيين الترميز إلى UTF-8 لدعم الحروف العربية بشكل صحيح -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- تحديد استجابة الصفحة لتناسب الأجهزة المختلفة (الهواتف) -->
-    <title>إيفيكو - اتصل بنا</title> <!-- عنوان الصفحة الذي يظهر في التبويب الخاص بالمتصفح -->
-    <link rel="stylesheet" href="cstyle.css"> <!-- ربط ملف CSS لتنسيق الصفحة -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- ربط مكتبة AOS لتحريك العناصر عند التمرير -->
-</head>
-<body onload="AOS.init();"> <!-- عند تحميل الصفحة، يتم تفعيل مكتبة AOS لتحريك العناصر -->
-
-    <header class="header"> <!-- رأس الصفحة الذي يحتوي على الشعار والقائمة -->
-        <div class="logo"> <!-- قسم الشعار -->
-            <a href=""> <!-- رابط الشعار (يمكنك تعديل الرابط ليرتبط بالصفحة الرئيسية) -->
-                <img src="https://cdn.discordapp.com/attachments/769247177330393140/1311879204970696714/logo.png?ex=674a7638&is=674924b8&hm=bebea307954b5c9b0129edf1c58cb80886bd14494ef752618b2faa4b3ad257b9&" alt="شعار إيفيكو"> <!-- صورة الشعار -->
-            </a>
-        </div>
-        <nav> <!-- قائمة التنقل -->
-            <ul> <!-- قائمة روابط -->
-                <li><a href="index.html">الرئيسية</a></li> <!-- رابط الصفحة الرئيسية -->
-                <li><a href="#about">من نحن</a></li> <!-- رابط قسم "من نحن" -->
-                <li><a href="#services">خدماتنا</a></li> <!-- رابط قسم "خدماتنا" -->
-                <li><a href="#projects">مشاريعنا</a></li> <!-- رابط قسم "مشاريعنا" -->
-                <li><a href="#partners">شراكاتنا</a></li> <!-- رابط قسم "شراكاتنا" -->
-                <li><a href="contact.html">اتصل بنا</a></li> <!-- رابط صفحة "اتصل بنا" الحالية -->
-            </ul>
-        </nav>
-    </header>
-
-    <section id="contact" class="contact-section"> <!-- قسم "اتصل بنا" -->
-        <div class="container"> <!-- حاوية تحتوي على النموذج -->
-            <div class="form-container"> <!-- حاوية النموذج -->
-                <img src="https://cdn.discordapp.com/attachments/769247177330393140/1311879204970696714/logo.png?ex=674a7638&is=674924b8&hm=bebea307954b5c9b0129edf1c58cb80886bd14494ef752618b2faa4b3ad257b9&" alt="شعارنا" class="logo"> <!-- صورة الشعار في النموذج -->
-                <form class="contact-form" action="send_email.php" method="POST"> <!-- نموذج الاتصال الذي يرسل البيانات إلى ملف PHP -->
-                    <div class="form-group"> <!-- مجموعة الحقول -->
-                        <div>
-                            <label for="name">الاسم</label> <!-- تسمية حقل الاسم -->
-                            <input type="text" id="name" name="name" placeholder="اسمك" required> <!-- حقل النص لإدخال الاسم -->
-                        </div>
-                        <div>
-                            <label for="email">الإيميل</label> <!-- تسمية حقل البريد الإلكتروني -->
-                            <input type="email" id="email" name="email" placeholder="بريدك الإلكتروني" required> <!-- حقل البريد الإلكتروني -->
-                        </div>
-                    </div>
-                    <label for="message">الرسالة</label> <!-- تسمية حقل الرسالة -->
-                    <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" required></textarea> <!-- حقل نصي لإدخال الرسالة -->
-                    <button type="submit">إرسال</button> <!-- زر إرسال النموذج -->
-                </form>                
-
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> <!-- ربط مكتبة AOS لتفعيل التأثيرات عند التمرير -->
-</body>
-
-<!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قناة فيوريوس على يوتيوب</title>
-    <link rel="stylesheet" href="style.css"> <!-- رابط ملف الـ CSS -->
+    <title>إيفيكو - الموقع الرسمي</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- إضافة مكتبة AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- تمكين التمرير السلس -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>قناة فيوريوس</h1>
-            <p>كل جديد من مقاطع الفيديو المثيرة!</p>
-        </header>
-        <section class="video-gallery">
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<body onload="AOS.init();">
+
+    <!-- البار العلوي مع الشعار -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/logo.png" alt="شعار إيفيكو">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#projects">مشاريعنا</a></li>
+                <li><a href="#partners">شراكاتنا</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- قسم الرئيسية (Home) -->
+    <section id="home" class="home-section" data-aos="fade-up" data-aos-duration="1000">
+        <div class="home-content">
+            <h1>مرحباً بك في إيفيكو</h1>
+            <p>نحن شركة رائدة في تقديم الحلول المبتكرة في مجال الرياضات الإلكترونية والتسويق الرقمي. هنا تجد كل ما تحتاجه لتنمية عملك وزيادة تأثيرك الرقمي.</p>
+        </div>
+        <div class="home-image">
+            <img src="images/home.png" alt="صورة رئيسية">
+        </div>
+    </section>
+
+    <!-- قسم من نحن (About Us) -->
+    <section id="about" class="about-section" data-aos="fade-up" data-aos-duration="1000">
+        <div class="about-content">
+            <h1>من نحن</h1>
+            <p>إيفيكو هي شركة تهتم بتقديم خدمات مبتكرة ومتطورة في مجال الرياضات الإلكترونية. نحن نقدم حلولاً تسويقية وتقنية عالية الجودة لعملائنا من أجل أن يتفوقوا في السوق الرقمية. نحن نؤمن أن النجاح يكمن في الابتكار المستمر والتعاون الاستراتيجي مع شركائنا.</p>
+        </div>
+        <div class="about-image">
+            <img src="images/who.png" alt="من نحن">
+        </div>
+    </section>
+
+    <!-- قسم خدماتنا (Services) -->
+    <section id="services" class="services-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2>خدماتنا</h2>
+        <div class="services-container">
+            <div class="service-box" data-aos="flip-left" data-aos-duration="1000">
+                <img src="images/marketing.png">
+                <h3>التسويق الإلكتروني</h3>
+                <p>نقدم استراتيجيات تسويق مبتكرة لزيادة التفاعل والوصول إلى جمهور واسع عبر الإنترنت.</p>
             </div>
-            <!-- كرر الـ video-item لكل فيديو -->
-            <div class="video-item">
-                <iframe src="https://www.youtube.com/embed/video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="service-box" data-aos="flip-left" data-aos-duration="1000">
+                <img src="images/champion.png">
+                <h3>تنظيم البطولات</h3>
+                <p>إدارة وتنظيم بطولات الرياضات الإلكترونية بشكل احترافي مع أفضل التجهيزات.</p>
             </div>
-            <!-- أضف المزيد من المقاطع هنا -->
-        </section>
-    </div>
+            <div class="service-box" data-aos="flip-left" data-aos-duration="1000">
+                <img src="images/analyics.png">
+                <h3>تحليل البيانات</h3>
+                <p>نقدم حلول تحليل البيانات المتقدمة لتحسين الأداء واتخاذ القرارات الذكية.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم مشاريعنا (Projects) -->
+    <section id="projects" class="projects-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2>مشاريعنا</h2>
+        <div class="projects-container">
+            <div class="project-box" data-aos="zoom-in-up" data-aos-duration="1000">
+                <img src="images/digital.png" alt="مشروع 1">
+                <h3>التصميم والمحتوى الرقمي</h3>
+                <p>الهدف هو تقديم حلول مبتكرة بجودة عالية مع التركيز على التطور والابتكار من خلال تحديث تقنيات الإنتاج، استقطاب فرق محترفة مواكبة لاتجاهات التصميم، وإنشاء منصة موحدة لخدمات التصميم.</p>
+            </div>
+            <div class="project-box" data-aos="zoom-in-up" data-aos-duration="1000">
+                <img src="images/programming (1).png" alt="مشروع 2">
+                <h3>الحلول التقنية (برمجة وتطوير)</h3>
+                <p>توفير حلول تقنية مبتكرة تلبي احتياجات السوق الرقمية عن طريق تعزيز قسم البرمجة لخدمات المواقع والتطبيقات، الاستثمار في الذكاء الاصطناعي وتحليل البيانات، وإنشاء شراكات مع شركات تقنية لدعم الابتكار.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم شراكاتنا (Partners) -->
+    <section id="partners" class="partners-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2>شراكاتنا</h2>
+        <div class="partners-container">
+            <img src="images/الفتح.png" alt="شريك 1" class="partner-logo">
+            <img src="images/مكاني.png" alt="شريك 2" class="partner-logo">
+            <img src="images/القادسية.png" alt="شريك 3" class="partner-logo">
+            <img src="images/سمايا المشقر.png" alt="شريك 4" class="partner-logo">
+        </div>
+    </section>
+
+    <!-- تضمين مكتبة AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <!-- الشعار -->
+            <div class="logo">
+                <img src="images/logo.png" alt="الشعار">
+            </div>
+
+            <!-- الروابط العلوية -->
+            <div class="footer-links">
+                <div class="right-links">
+                    <a href="#">لماذا نحن</a>
+                    <a href="#">خدماتنا</a>
+                    <a href="#">من نحن</a>
+                </div>
+                <div class="left-links">
+                    <a href="#">تواصل معنا</a>
+                    <a href="#">شركاء النجاح</a>
+                </div>
+            </div>
+
+            <!-- الحقوق والسياسات -->
+            <div class="footer-policies">
+                <p>جميع الحقوق محفوظة Evico Company 2025</p>
+                <p><a href="#">سياسة الخصوصية</a> | <a href="#">شروط الاستخدام</a> | <a href="#">اتصل بنا</a></p>
+            </div>
+
+            <!-- الأيقونات -->
+            <div class="contact-info">
+                <div class="icons">
+                    <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="icon"><i class="fab fa-behance"></i></a>
+                </div>
+                <p class="email">evico.corp@gmail.com</p>
+                <p class="phone">0559616299</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-
-            
