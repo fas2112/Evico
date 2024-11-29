@@ -21,7 +21,7 @@ try {
 
     // المستلمين
     $mail->setFrom('your-email@gmail.com', 'Your Name');         // من البريد الإلكتروني
-    $mail->addAddress('recipient-email@example.com', 'Recipient Name');  // المرسل إليه
+    $mail->addAddress('evico.corp@gmail.com', 'Evico Corp');     // تغيير البريد الإلكتروني إلى الجديد
 
     // محتوى الرسالة
     $mail->isHTML(true);                                         // تحديد أن الرسالة بتنسيق HTML
@@ -30,7 +30,13 @@ try {
 
     // إرسال الرسالة
     $mail->send();
-    echo 'تم إرسال الرسالة بنجاح';
+
+    // إرسال رسالة شكر للمستخدم
+    echo '<script>alert("شكراً على رسالتك، تم إرسالها بنجاح!");</script>';
+
+    // يمكنك إعادة توجيه المستخدم إلى صفحة شكر أو صفحة أخرى
+    // echo '<script>window.location.href = "thankyou.html";</script>';
+
 } catch (Exception $e) {
     echo "حدث خطأ أثناء إرسال الرسالة: {$mail->ErrorInfo}";  // عرض رسالة الخطأ إذا فشل الإرسال
 }
