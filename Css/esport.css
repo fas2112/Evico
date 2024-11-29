@@ -1,0 +1,150 @@
+/* تعيين القيم الأساسية وتنسيق الصفحة */
+:root {
+  --primary-color: #f9f9f9;
+  --secondary-color: #fff;
+  --accent-color: #ff6347;
+  --background-color: #f9f9f9;
+  --font-family: 'IBM Plex Sans Arabic', sans-serif;
+  --main-text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--main-text-color);
+  line-height: 1.6;
+  font-size: 18px;
+  direction: rtl;
+}
+
+/* ====== تصميم الهيدر ====== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #00000000; /* شفاف */
+  color: #fff;
+  width: 100%;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* ====== قسم الاتصال ====== */
+.contact-section {
+  padding: 80px 50px;
+  background-color: var(--primary-color);
+}
+
+.contact-section h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  outline: none;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #0958b1;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: var(--accent-color);
+}
+
+/* ====== معرض الفيديو ====== */
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.video-item {
+  flex: 1 1 calc(33% - 30px);
+  max-width: 400px;
+  min-width: 300px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+  transform: scale(1.05);
+}
+
+iframe {
+  width: 100%;
+  height: 225px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ====== تصميم متجاوب للجوال ====== */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 15px 30px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .video-item {
+    flex: 1 1 100%;
+  }
+}
